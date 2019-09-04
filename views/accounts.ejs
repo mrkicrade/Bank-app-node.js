@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+	<!-- Jumbotron -->
+	<div class="jumbotron text-center">
+		<h3>Bank application</h3>
+		<a href="/" class="btn btn-primary">Accounts</a>
+		<a href="/add_account" class="btn btn-info">Add Account</a>
+		<a href="/edit_delete" class="btn btn-warning">Edit Delete</a>
+	</div>
+	<!-- Jumbotron End -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12">
+				<!-- Main Row -->
+				<div class="container">
+					<div id="mainRow" class="row">
+						<div class="col-10 offset-1">
+							<h4 class="display-4 text-center">Accounts</h4>
+						</div>	
+					</div>		
+				</div>
+			
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<table class="table">
+								<thead>
+									<tr>
+										<!-- <th>ID</th> -->
+										<th>Name</th>
+										<th>Deposit</th>
+										<th>Card</th>
+									</tr>
+								</thead>
+								<tbody id="table1">
+									<% accounts.forEach(function(item){ %>
+									<tr>
+										<!-- <td><%= item._id %></td> -->
+										<td><%= item.name %></td>
+										<td><%= item.deposit %></td>
+										<td><%= item.card %></td>
+									</tr>
+									<% }) %>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- Main Row End -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="main.css"> -->
+</head>
+<body>
+	
+	<!-- Jumbotron -->
+	<div class="jumbotron text-center">
+		<h3>Bank application</h3>
+		<a href="/" class="btn btn-primary">Accounts</a>
+		<a href="/add_account" class="btn btn-info">Add Account</a>
+		<a href="/edit_delete" class="btn btn-warning">Edit Delete</a>
+	</div>
+
+	<!-- Container -->
+	<div class="container">
+		<!-- Edit Row -->
+		<div id="editRow" class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h4 class="display-4 text-center">Edit</h4>
+					</div>	
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-8 offset-2 col-sm-10 offset-1 col-md-8 offset-2 col-lg-6 offset-3">
+						<form method="POST" action="/edit/:id">
+							<input type="text" name="name" class="form-control" value="<%= account[0].name %>"><br>
+							<input type="text" name="deposit" class="form-control" value="<%= account[0].deposit %>"><br>
+							<input type="text" name="card" class="form-control" value="<%= account[0].card %>"><br>
+							<button id="saveEditBtn" class="btn btn-success form-control">Edit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- Container End -->
+</body>
+</html>
